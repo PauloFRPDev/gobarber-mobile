@@ -26,6 +26,8 @@ export function* signIn({ payload }) {
 
     api.defaults.headers.Authorization = `Bearer ${token}`;
 
+    // yield delay(3000);
+
     yield put(signInSuccess(token, user));
 
     // history.push('/dashboard');
